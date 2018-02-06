@@ -24,7 +24,7 @@ function clayExport(url) {
 
   return streamFetchJson(url)
     .flatMap(result => {
-      // ???
+      // array of pages
       if (Array.isArray(result)) {
         return h(result)
           .map(stripPrefix)
